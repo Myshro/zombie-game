@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d2y5romsasiwx"]
+[gd_scene load_steps=17 format=3 uid="uid://rk5vrvekdn6y"]
 
 [ext_resource type="Texture2D" uid="uid://byvoxl6ee1ykf" path="res://assets/TileMap/NinjaAdventure/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="1_7jicg"]
 [ext_resource type="Texture2D" uid="uid://b3yyj02rqgmbc" path="res://assets/TileMap/NinjaAdventure/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="2_5bssp"]

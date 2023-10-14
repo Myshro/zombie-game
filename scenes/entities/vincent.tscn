@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d042fo3u6q2js"]
+
+[gd_scene load_steps=5 format=3 uid="uid://dn5bow8n7i3od"]
 
 [ext_resource type="Script" path="res://assets/scripts/player.gd" id="1_bxotv"]
 [ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_s8xjh"]
-[ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="3_6piy7"]
+[ext_resource type="PackedScene" uid="uid://cicxd7mijd8kl" path="res://scenes/entities/gun.tscn" id="3_75qve"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_th127"]
 
@@ -17,5 +18,8 @@ shape = SubResource("CircleShape2D_th127")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_s8xjh")
 
+[node name="gun" parent="." instance=ExtResource("3_75qve")]
+position = Vector2(15, 0)
+pos = Vector2(0, 0)
 [node name="HealthComp" type="Node" parent="."]
 script = ExtResource("3_6piy7")

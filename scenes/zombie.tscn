@@ -8,6 +8,9 @@
 radius = 9.05539
 
 [node name="Zombie" type="CharacterBody2D" node_paths=PackedStringArray("health_comp")]
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_5yi05")
 health_comp = NodePath("HealthComp")
 
@@ -20,3 +23,13 @@ texture = ExtResource("2_b5hxy")
 
 [node name="HealthComp" type="Node" parent="."]
 script = ExtResource("3_mvwnm")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+debug_path_custom_color = Color(0.933333, 0, 0.470588, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

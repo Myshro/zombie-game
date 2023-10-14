@@ -7,7 +7,7 @@ extends Node2D
 var reload : float = 0
 func _input(event):
 	if (event.is_action_pressed("lmb") and reload <= 0):
-		print("shoot")
+		#print("shoot")
 		var newBullet = bullet.instantiate() as Bullet
 		get_tree().root.add_child(newBullet)
 		newBullet.position = pos + global_position

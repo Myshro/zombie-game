@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://eu6gvil3xmm6"]
+
+[ext_resource type="Script" path="res://assets/scripts/zombie.gd" id="1_5yi05"]
+[ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_b5hxy"]
+
+[node name="Zombie" type="CharacterBody2D"]
+script = ExtResource("1_5yi05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.364706, 1, 0.85098, 1)
+texture = ExtResource("2_b5hxy")

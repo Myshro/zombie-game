@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-class_name Player
-
 @export var speed := 100
 @export var acc := 10
 func _physics_process(_delta):

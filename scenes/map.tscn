@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx7s2kawsspf0"]
+
+[gd_scene load_steps=17 format=3 uid="uid://rk5vrvekdn6y"]
+
 
 [ext_resource type="TileSet" path="res://assets/map.tres" id="1_kts7p"]
 [ext_resource type="Script" path="res://assets/scripts/camera.gd" id="3_kinqs"]

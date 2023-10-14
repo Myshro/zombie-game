@@ -1,13 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://eu6gvil3xmm6"]
+[gd_scene load_steps=5 format=3 uid="uid://eu6gvil3xmm6"]
 
 [ext_resource type="Script" path="res://assets/scripts/zombie.gd" id="1_5yi05"]
 [ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_b5hxy"]
+[ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="3_mvwnm"]
 
-[node name="Zombie" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_h5ayu"]
+radius = 9.05539
+
+[node name="Zombie" type="CharacterBody2D" node_paths=PackedStringArray("health_comp")]
 script = ExtResource("1_5yi05")
+health_comp = NodePath("HealthComp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h5ayu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.364706, 1, 0.85098, 1)
 texture = ExtResource("2_b5hxy")
+
+[node name="HealthComp" type="Node" parent="."]
+script = ExtResource("3_mvwnm")

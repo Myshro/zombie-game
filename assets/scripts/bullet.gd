@@ -4,7 +4,7 @@ class_name Bullet
 
 @export var speed :float = 100
 func _ready():
-	print("I WAS BORN")
+	#print("I WAS BORN")
 func _physics_process(delta):
 	position += transform.x * speed * delta
 

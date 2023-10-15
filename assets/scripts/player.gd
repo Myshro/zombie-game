@@ -15,4 +15,3 @@ func _physics_process(_delta):
 	look_at(get_global_mouse_position())
 	
 	move_and_slide()
-	look_at(get_global_mouse_position())

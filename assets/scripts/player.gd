@@ -21,7 +21,6 @@ func _physics_process(_delta):
 	look_at(get_global_mouse_position())
 	
 	move_and_slide()
-	look_at(get_global_mouse_position())
 	
 	if is_holding && Input.is_action_pressed("rmb"):
 		corpse.position = hold_point.global_position

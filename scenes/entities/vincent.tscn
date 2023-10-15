@@ -1,9 +1,11 @@
+
 [gd_scene load_steps=7 format=3 uid="uid://d042fo3u6q2js"]
 
 [ext_resource type="Script" path="res://assets/scripts/player.gd" id="1_bxotv"]
 [ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_s8xjh"]
 [ext_resource type="PackedScene" uid="uid://cicxd7mijd8kl" path="res://scenes/entities/gun.tscn" id="3_75qve"]
 [ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="4_o2kvo"]
+[ext_resource type="PackedScene" uid="uid://hwvm5uym2iia" path="res://scenes/entities/fortificationPlacing.tscn" id="5_e7c5s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_th127"]
 radius = 7.07107
@@ -27,6 +29,9 @@ position = Vector2(15, 0)
 
 [node name="HealthComp" type="Node" parent="."]
 script = ExtResource("4_o2kvo")
+
+
+[node name="fortificationPlacing" parent="." instance=ExtResource("5_e7c5s")]
 
 [node name="Holdable" type="Node2D" parent="."]
 position = Vector2(18, 0)

@@ -22,4 +22,5 @@ func set_health(val: int):
 		health = val
 		
 func die():
+	#body
 	get_parent().queue_free()

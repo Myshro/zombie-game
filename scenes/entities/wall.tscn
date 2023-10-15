@@ -5,11 +5,14 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0vhb"]
 
+
 [node name="wall" type="StaticBody2D" node_paths=PackedStringArray("sprite", "coll2D")]
 collision_layer = 2
 script = ExtResource("1_ie8w3")
 sprite = NodePath("Sprite2D")
 coll2D = NodePath("CollisionShape2D")
+
+
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 2)

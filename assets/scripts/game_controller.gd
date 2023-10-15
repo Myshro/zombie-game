@@ -24,7 +24,10 @@ func startPrepPhase():
 	prep_phase_timer.start()
 
 func zombieDied():
-	if(get_tree().root.get_groups().size() <= 0):
+	var zombie_size := get_tree().get_nodes_in_group("zombie").size()
+	print(zombie_size)
+	if (zombie_size <= 1):
+		print("all died")
 		startPrepPhase()
 	
 #spawn zombie

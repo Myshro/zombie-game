@@ -6,7 +6,7 @@ class_name wall
 @export var coll2D: CollisionShape2D
 var holding: bool
 var player: Node2D
-var health_comp: HealthComp
+@export var health_comp: HealthComp 
 func _ready():
 	#sprite = get_node("Sprite2D")
 	#coll2D = get_node("CollisionShape2D")
@@ -25,10 +25,16 @@ func place():
 	holding = false
 	
 func _process(delta):
+	
 	if(holding):
 		var mouseDir : Vector2 = get_global_mouse_position() - player.global_position
 		position = player.global_position + 20 * (mouseDir.normalized())
 		look_at(get_global_mouse_position())
+
+func handle_destroy():
+	if health_comp.health <= 0:
+		queue_free()
+
 func _input(event):
 	if(event.is_action_pressed("place") && holding):
 		place()

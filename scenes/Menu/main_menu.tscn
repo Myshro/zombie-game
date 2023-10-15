@@ -57,6 +57,15 @@ stream = ExtResource("4_ryt25")
 volume_db = -8.432
 autoplay = true
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 43.0
+offset_right = 698.0
+offset_bottom = 201.0
+theme_override_font_sizes/normal_font_size = 62
+text = "Undertaker"
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

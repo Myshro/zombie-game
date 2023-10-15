@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn5bow8n7i3od"]
+[gd_scene load_steps=6 format=3 uid="uid://d042fo3u6q2js"]
 
 [ext_resource type="Script" path="res://assets/scripts/player.gd" id="1_bxotv"]
 [ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_s8xjh"]
-[ext_resource type="PackedScene" uid="uid://cicxd7mijd8kl" path="res://scenes/entities/gun.tscn" id="3_75qve"]
+[ext_resource type="PackedScene" path="res://scenes/entities/gun.tscn" id="3_75qve"]
 [ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="4_o2kvo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_th127"]

@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-#@onready var player := get_tree().get_root().get_node("andrew_test/Player") 
-@export var player : Node2D
+@onready var player := get_tree().get_root().get_node("TileMap/Player") 
+#@export var player : Node2D
+@export var corpse : PackedScene
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 @export var acc : float = 10
@@ -10,7 +11,7 @@ extends CharacterBody2D
 
 
 func _ready() -> void:
-	speed = player.speed * 0.75
+	speed = player.speed * 1.10
 
 func make_path() -> void:
 	nav_agent.target_position = player.global_position
@@ -18,6 +19,7 @@ func make_path() -> void:
 func _physics_process(_delta) -> void:
 #	shuffle()
 	navigate()
+	handle_die()
 	
 #func shuffle() -> void:
 #	velocity = get_global_transform().basis_xform(Vector2.RIGHT) * speed 
@@ -31,3 +33,10 @@ func navigate():
 	
 func _on_timer_timeout():
 	make_path()
+
+func handle_die():
+	if (health_comp.health <= 0):
+		var new_corpse := corpse.instantiate() 
+		get_tree().root.add_child(new_corpse)
+		new_corpse.position = self.global_position
+		queue_free()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc4onuf14ugmu"]
+[gd_scene load_steps=6 format=3 uid="uid://bc4onuf14ugmu"]
 
 [ext_resource type="TileSet" uid="uid://csuu8t8qpgmu0" path="res://assets/map.tres" id="1_kts7p"]
 [ext_resource type="Script" path="res://assets/scripts/camera.gd" id="3_kinqs"]
-[ext_resource type="PackedScene" uid="uid://dn5bow8n7i3od" path="res://scenes/entities/vincent.tscn" id="7_6l3fi"]
+[ext_resource type="PackedScene" uid="uid://c0ekwb0hv32rl" path="res://scenes/entities/corpse.tscn" id="5_bi6d4"]
+[ext_resource type="PackedScene" uid="uid://d042fo3u6q2js" path="res://scenes/entities/vincent.tscn" id="7_6l3fi"]
 [ext_resource type="PackedScene" uid="uid://eu6gvil3xmm6" path="res://scenes/zombie.tscn" id="8_kieg4"]
 
 [node name="TileMap" type="TileMap"]
@@ -25,6 +26,10 @@ zoom = Vector2(3, 3)
 script = ExtResource("3_kinqs")
 player = NodePath("../Player")
 
-[node name="Zombie" parent="." node_paths=PackedStringArray("player") instance=ExtResource("8_kieg4")]
+[node name="Zombie" parent="." instance=ExtResource("8_kieg4")]
 position = Vector2(-63, -35)
-player = NodePath("../Player")
+corpse = ExtResource("5_bi6d4")
+
+[node name="Corpse" parent="." instance=ExtResource("5_bi6d4")]
+position = Vector2(-926, 1)
+zombie = ExtResource("8_kieg4")

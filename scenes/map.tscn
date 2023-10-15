@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bc4onuf14ugmu"]
 
-[ext_resource type="TileSet" uid="uid://dkwovypsdn40r" path="res://assets/map.tres" id="1_kts7p"]
+[ext_resource type="TileSet" uid="uid://csuu8t8qpgmu0" path="res://assets/map.tres" id="1_kts7p"]
 [ext_resource type="Script" path="res://assets/scripts/camera.gd" id="3_kinqs"]
 [ext_resource type="PackedScene" uid="uid://d042fo3u6q2js" path="res://scenes/entities/vincent.tscn" id="7_6l3fi"]
 

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var player := get_tree().root.get_node("TileMap/Player") 
+@onready var player := get_tree().root.get_node("TEST/TileMap/Player") 
 #@export var player : Node2D
 @export var corpse : PackedScene
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D

@@ -1,17 +1,20 @@
 extends CharacterBody2D
 
-@onready var player := get_tree().get_root().get_node("TileMap/Player") 
+@onready var player := get_tree().root.get_node("TileMap/Player") 
 #@export var player : Node2D
 @export var corpse : PackedScene
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+@onready var slow_timer := $SlowTimer as Timer
 
 @export var acc : float = 10
-@export var speed : float = 0
+@export var speed : float = NORMAL_SPEED
+const NORMAL_SPEED := 150
+const SLOWED_SPEED := 0
 @export var health_comp : HealthComp
 
 
 func _ready() -> void:
-	speed = player.speed * 1.10
+	speed = player.speed * 1.5
 
 func make_path() -> void:
 	nav_agent.target_position = player.global_position
@@ -34,9 +37,17 @@ func navigate():
 func _on_timer_timeout():
 	make_path()
 
+func cripple():
+	speed = SLOWED_SPEED
+	slow_timer.start()
+
 func handle_die():
 	if (health_comp.health <= 0):
 		var new_corpse := corpse.instantiate() 
 		get_tree().root.add_child(new_corpse)
 		new_corpse.position = self.global_position
 		queue_free()
+
+
+func _on_slow_timer_timeout():
+	speed = NORMAL_SPEED

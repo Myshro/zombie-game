@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccjbm0yo518g"]
+[gd_scene load_steps=4 format=3 uid="uid://ciivs0jhagwdb"]
 
 [ext_resource type="PackedScene" uid="uid://bc4onuf14ugmu" path="res://scenes/map.tscn" id="1_m12lh"]
 [ext_resource type="PackedScene" uid="uid://brtvjf4h5v6uj" path="res://scenes/entities/wall.tscn" id="2_o7fqi"]
-[ext_resource type="PackedScene" uid="uid://c0ekwb0hv32rl" path="res://scenes/entities/corpse.tscn" id="3_7jdef"]
+[ext_resource type="PackedScene" uid="uid://c0kl1ipakwc4x" path="res://scenes/entities/corpse.tscn" id="3_7jdef"]
 
 [node name="TEST" type="Node2D"]
 

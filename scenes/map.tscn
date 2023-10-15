@@ -1,10 +1,8 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc4onuf14ugmu"]
 
-[gd_scene load_steps=17 format=3 uid="uid://rk5vrvekdn6y"]
-
-
-[ext_resource type="TileSet" path="res://assets/map.tres" id="1_kts7p"]
+[ext_resource type="TileSet" uid="uid://csuu8t8qpgmu0" path="res://assets/map.tres" id="1_kts7p"]
 [ext_resource type="Script" path="res://assets/scripts/camera.gd" id="3_kinqs"]
-[ext_resource type="PackedScene" uid="uid://d042fo3u6q2js" path="res://scenes/entities/vincent.tscn" id="7_6l3fi"]
+[ext_resource type="PackedScene" uid="uid://dn5bow8n7i3od" path="res://scenes/entities/vincent.tscn" id="7_6l3fi"]
 [ext_resource type="PackedScene" uid="uid://eu6gvil3xmm6" path="res://scenes/zombie.tscn" id="8_kieg4"]
 
 [node name="TileMap" type="TileMap"]

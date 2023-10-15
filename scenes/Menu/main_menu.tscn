@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyotfbxo18jyy"]
+[gd_scene load_steps=7 format=3 uid="uid://dyotfbxo18jyy"]
 
 [ext_resource type="Script" path="res://scenes/Menu/main_menu.gd" id="1_d6p2u"]
 [ext_resource type="Theme" uid="uid://may8oe25fm1r" path="res://assets/text_themes/minecraft.tres" id="2_kbg4f"]
 [ext_resource type="Texture2D" uid="uid://bmb637f4htn1p" path="res://assets/text_themes/CoolBackground.png" id="3_h07e7"]
+[ext_resource type="Script" path="res://scenes/Menu/OptionsButton.gd" id="4_oh6tj"]
 [ext_resource type="AudioStream" uid="uid://bk1cx1l064b3l" path="res://assets/TileMap/NinjaAdventure/Musics/22 - Dream.ogg" id="4_ryt25"]
+[ext_resource type="AudioStream" uid="uid://elbtcbw6w43k" path="res://assets/TileMap/NinjaAdventure/Musics/brayscreamandcream.mp3" id="5_8k423"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -33,7 +35,7 @@ anchor_bottom = 1.0
 offset_left = 61.14
 offset_top = -134.175
 offset_right = 283.14
-offset_bottom = -27.175
+offset_bottom = -27.1748
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
@@ -46,6 +48,10 @@ text = "Start"
 layout_mode = 2
 theme = ExtResource("2_kbg4f")
 text = "Options"
+script = ExtResource("4_oh6tj")
+
+[node name="BraydenNut" type="AudioStreamPlayer" parent="VBoxContainer/OptionsButton"]
+stream = ExtResource("5_8k423")
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -68,4 +74,5 @@ text = "Undertaker"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="VBoxContainer/OptionsButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -8,5 +8,5 @@
 default_font = ExtResource("1_bm032")
 Button/colors/font_color = Color(0.87451, 0.87451, 0.87451, 1)
 Button/colors/font_hover_color = Color(0.411765, 0, 0, 1)
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 27
 Button/styles/normal = SubResource("StyleBoxEmpty_afrhm")

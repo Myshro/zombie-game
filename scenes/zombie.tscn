@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://eu6gvil3xmm6"]
+[gd_scene load_steps=6 format=3 uid="uid://eu6gvil3xmm6"]
 
 [ext_resource type="Script" path="res://assets/scripts/zombie.gd" id="1_5yi05"]
 [ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_b5hxy"]
+[ext_resource type="PackedScene" uid="uid://c0kl1ipakwc4x" path="res://scenes/entities/corpse.tscn" id="2_sft75"]
 [ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="3_mvwnm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h5ayu"]
@@ -12,6 +13,7 @@ collision_mask = 3
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_5yi05")
+corpse = ExtResource("2_sft75")
 health_comp = NodePath("HealthComp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -11,10 +11,12 @@ extends CharacterBody2D
 const NORMAL_SPEED := 150
 const SLOWED_SPEED := 0
 @export var health_comp : HealthComp
-
+@export var game_controller: Node2D
 
 func _ready() -> void:
 	speed = player.speed * 1.5
+	game_controller = get_tree().root.get_child(0).find_child("game_controller")
+	print(game_controller)
 
 func make_path() -> void:
 	nav_agent.target_position = player.global_position
@@ -42,7 +44,9 @@ func cripple():
 	slow_timer.start()
 
 func handle_die():
+	print(game_controller)
 	if (health_comp.health <= 0):
+		game_controller.zombieDied()
 		var new_corpse := corpse.instantiate() 
 		get_tree().root.add_child(new_corpse)
 		new_corpse.position = self.global_position

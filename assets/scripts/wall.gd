@@ -14,7 +14,7 @@ func _ready():
 func setPlayer(_player: Node2D):
 	player = _player
 func preview():
-	print("preview")
+	#print("preview")
 	coll2D.disabled = true
 	sprite.modulate.a = 0.5
 	holding = true

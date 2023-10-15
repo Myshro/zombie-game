@@ -10,8 +10,8 @@ func _ready():
 
 func take_damage(val: int):
 	set_health(health - val)
-	if(health <= 0):
-		die()
+#	if(health <= 0):
+#		die()
 	
 func set_health(val: int):
 	if val > max_health:
@@ -20,5 +20,6 @@ func set_health(val: int):
 		health = 0
 	else:
 		health = val
+		
 func die():
 	get_parent().queue_free()
